@@ -1,6 +1,6 @@
-let color = [2, 4, 6];
-const colorx2 = color.map((value, index) => {
-  // console.log("index =", index, ", value =", value);
-  return value * 2;
+let color = [2, 4, 6, 3, 7];
+const newArray = color.filter((value, index) => {
+  return value % 2 === 1;
 });
-console.log("color x2 =", colorx2);
+console.log("Array First =", color);
+console.log("New Array =", newArray);
