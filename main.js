@@ -1,15 +1,13 @@
-const myBtnElement = document.getElementById("myButton");
-const backButtonElement = document.getElementById("backButton");
-const myTextElement = document.getElementById("myText");
-myBtnElement.addEventListener("click", () => {
-  console.log("click me");
-  myTextElement.style.color = "red";
-  myTextElement.style.backgroundColor = "green";
-  myTextElement.classList.add("bao", "hoang");
-});
-backButtonElement.addEventListener("click", () => {
-  // console.log("click me");
-  myTextElement.style.color = "black";
-  myTextElement.style.backgroundColor = "unset";
-  myTextElement.classList.remove("bao", "hoang");
+const btn = document.getElementById("submitBtn");
+const input = document.getElementById("name");
+const previous = document.getElementById("previous");
+const previousName = localStorage.getItem("baohoang");
+if (previousName) {
+  previous.innerText = previousName;
+}
+
+btn.addEventListener("click", () => {
+  // console.log(input.value);
+  localStorage.setItem("baohoang", input.value);
+  document.getElementById("message").innerText = input.value;
 });
