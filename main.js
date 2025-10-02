@@ -1,8 +1,4 @@
-function greeting() {
-  console.log("say hi");
-}
-greeting();
-function sum(a, b) {
-  return a + b;
-}
-console.log(sum(5, 10));
+let color = ["red", "blue", "green"];
+color.forEach((value, index) => {
+  console.log("value =", value, ", index =", index);
+});
