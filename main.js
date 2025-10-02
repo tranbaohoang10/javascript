@@ -1,4 +1,6 @@
-let color = ["red", "blue", "green"];
-color.forEach((value, index) => {
-  console.log("value =", value, ", index =", index);
+let color = [2, 4, 6];
+const colorx2 = color.map((value, index) => {
+  // console.log("index =", index, ", value =", value);
+  return value * 2;
 });
+console.log("color x2 =", colorx2);
