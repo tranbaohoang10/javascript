@@ -1,2 +1,8 @@
-var a = 3 + 4;
-console.log(a);
+function greeting() {
+  console.log("say hi");
+}
+greeting();
+function sum(a, b) {
+  return a + b;
+}
+console.log(sum(5, 10));
