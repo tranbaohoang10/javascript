@@ -1,13 +1,16 @@
-const btn = document.getElementById("submitBtn");
-const input = document.getElementById("name");
-const previous = document.getElementById("previous");
-const previousName = localStorage.getItem("baohoang");
-if (previousName) {
-  previous.innerText = previousName;
-}
+const usernameElement = document.getElementById("username");
+const passwordElement = document.getElementById("password");
+const btnLoginElement = document.getElementById("btnLogin");
 
-btn.addEventListener("click", () => {
-  // console.log(input.value);
-  localStorage.setItem("baohoang", input.value);
-  document.getElementById("message").innerText = input.value;
+btnLoginElement.addEventListener("click", () => {
+  const username = usernameElement.value;
+  const password = passwordElement.value;
+  if (username === "baohoang@gmail.com" && password === "123456") {
+    alert("Dang nhap thanh cong");
+    window.location.href = "success.html";
+  } else {
+    alert("Username/Password khong chinh xac");
+    usernameElement.style.borderColor = "red";
+    passwordElement.style.borderColor = "red";
+  }
 });
